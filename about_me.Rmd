@@ -4,14 +4,14 @@ subtitle: "something about me and my job, but not too much"
 
 output:
   tufte::tufte_html: default
-#   tufte::tufte_handout:
-#     citation_package: natbib
-#     latex_engine: xelatex
-#   tufte::tufte_book:
-#     citation_package: natbib
-#     latex_engine: xelatex
-# bibliography: skeleton.bib
-# link-citations: yes
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: skeleton.bib
+link-citations: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -19,6 +19,11 @@ library(tufte)
 # invalidate cache when the tufte version changes
 knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tufte'))
 options(htmltools.dir.version = FALSE)
+```
+
+```{marginfigure}
+We know from _the first fundamental theorem of calculus_ that for $x$ in $[a, b]$:
+$$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$
 ```
 
 ```{marginfigure}
